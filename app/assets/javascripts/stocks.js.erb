@@ -1,0 +1,6 @@
+var stocks = <%= Stock.all.map{ |stock| stock.ticker } %>;
+$(document).ready(function(){
+  $( ".stock-select" ).autocomplete({
+    source: stocks
+  });
+});
